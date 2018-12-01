@@ -3,7 +3,7 @@ FROM alpine:3.8
 RUN apk update && \
  apk upgrade && \
  apk add --virtual deps git build-base python3-dev && \
- apk add python3 && \
+ apk add python3 ca-certificates && \
  cd ~ && \
  git clone https://git.pleroma.social/pleroma/relay.git && \
  cd relay && \

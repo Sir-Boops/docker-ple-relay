@@ -8,7 +8,7 @@ RUN apk update && \
  cd ~ && \
  git clone https://git.pleroma.social/pleroma/relay.git && \
  cd relay && \
- git checkout $PLE_HASH
+ git checkout $PLE_HASH && \
  pip3 install -r requirements.txt && \
  apk del --purge deps
 

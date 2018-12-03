@@ -1,4 +1,5 @@
 FROM alpine:3.8
+ENV PLE_HASH="e44544d22e729fa6ce6f906693fea20d6ce57c80"
 
 RUN apk update && \
  apk upgrade && \
@@ -7,6 +8,7 @@ RUN apk update && \
  cd ~ && \
  git clone https://git.pleroma.social/pleroma/relay.git && \
  cd relay && \
+ git checkout $PLE_HASH
  pip3 install -r requirements.txt && \
  apk del --purge deps
 

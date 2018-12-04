@@ -1,5 +1,5 @@
 FROM alpine:3.8
-ENV PLE_HASH="e44544d22e729fa6ce6f906693fea20d6ce57c80"
+ENV PLE_HASH="008f43db2c268291f6cfe4fe890dfbb9e79885ac"
 
 RUN apk update && \
  apk upgrade && \

@@ -10,7 +10,7 @@ RUN apk update && \
  cd relay && \
  git checkout $PLE_HASH && \
  pip3 install -r requirements.txt && \
- apk purge deps
+ apk del deps
 
 WORKDIR /root/relay
 CMD python3 -m relay
